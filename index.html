@@ -11,8 +11,8 @@
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script type="text/javascript" src="javascripts/script.js"></script>
 
-  <title>Leagueoflegendsrecitems</title>
-  <meta name="description" content="League of Legends Recommended Items ini files.">
+  <title>League of Legends Recommended Items INI Package</title>
+  <meta name="description" content="a collection of League of Legends Recommended Items ini files.">
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
@@ -22,39 +22,79 @@
 
   <div class="wrapper">
     <header>
-      <h1 class="title">Leagueoflegendsrecitems</h1>
+      <h1 class="title">League of Legends Recommended Items INI Package</h1>
     </header>
     <div id="container">
-      <p class="tagline">League of Legends Recommended Items ini files.</p>
+      <p class="tagline">a collection of League of Legends Recommended Items ini files.</p>
       <div id="main" role="main">
         <div class="download-bar">
         <div class="inner">
           <a href="https://github.com/FiXato/LeagueOfLegendsRecItems/tarball/master" class="download-button tar"><span>Download</span></a>
           <a href="https://github.com/FiXato/LeagueOfLegendsRecItems/zipball/master" class="download-button zip"><span>Download</span></a>
-          <a href="https://github.com/FiXato/LeagueOfLegendsRecItems" class="code">View Leagueoflegendsrecitems on GitHub</a>
+          <a href="https://github.com/FiXato/LeagueOfLegendsRecItems" class="code">View League of Legends Recommended Items INI Package on GitHub</a>
         </div>
         <span class="blc"></span><span class="trc"></span>
         </div>
         <article class="markdown-body">
-          <h3>Recommended Items Builds for League of Legends</h3>
+          <h1>Recommended Items INI Packages for League of Legends</h1>
 
-<p>This repository will contain my <em>recommended items</em> for League of Legends champions as I play with them.
-The ini files are built per instructions of <a href="http://leagueoflegends.wikia.com/wiki/Recommended_item_code">http://leagueoflegends.wikia.com/wiki/Recommended_item_code</a> with my own additions such as comments showing the statistics of each item, as well as total costs.
+<p>With Patch V1.0.0.124 of League of Legends, you can change the recommended items for each of your Champions, for 3 different game modes (Classic, Dominion, and Proving Grounds (ARAM).
+Please note that this way of changing the UI is not officially supported by Riot and does not guarantee support if something fails.</p>
+
+<p>This repository will contain <strong>my</strong> <em>recommended items</em> for League of Legends champions as I play with them.
+The INI files are built per instructions of <a href="http://leagueoflegends.wikia.com/wiki/Recommended_item_code">http://leagueoflegends.wikia.com/wiki/Recommended_item_code</a> with my own additions such as comments showing the statistics of each item, as well as total costs.
 Manually adding these should help with seeing if any stats are missing for a character build.</p>
 
-<h3>Installation Instructions</h3>
+<h1>Usage Instructions</h1>
 
-<p>Find the directory where you've installed League of Legends (for instance <code>G:\Games\League of Legends\</code>) and go down to the <code>RADS\solutions\lol_game_client_sln\releases\0.0.0.174\deploy\DATA</code> directory and clone this repository there as 'Characters':</p>
+<h2>Installation</h2>
+
+<p>Find the directory where you've installed League of Legends (for instance <code>G:\Games\League of Legends\</code>) and go down to the <code>RADS\solutions\lol_game_client_sln\releases\VERSION.NUMBER\deploy\DATA</code> directory and clone this repository there as 'Characters'.
+Let's say the VERSION.NUMBER is 0.0.0.174, you could use the following command prompt commands (assuming you have installed Git):</p>
 
 <pre><code>$ cd G:\Games\League of Legends\RADS\solutions\lol_game_client_sln\releases\0.0.0.174\deploy\DATA
 $ git clone git://github.com/FiXato/LeagueOfLegendsRecItems.git Characters
 </code></pre>
+
+<p><strong>The VERSION.NUMBER folder may change its name every time the client is patched. You may need to create the Characters directory manually.</strong></p>
+
+<h2>Creating your own files</h2>
+
+<p><strong>To create a custom recommended item list for a champion you need three things:</strong></p>
+
+<ol>
+<li>The name of the Champion (as inside the 'Disp<em>name' column of the champion list, _leaving out any spaces and punctuation</em>) <em>(e.g. ChoGoth)</em>
+</li>
+<li>The game mode (Classic, Dominion, ARAM)</li>
+<li>The ID numbers of the items in the game (see <a href="http://leagueoflegends.wikia.com/wiki/Recommended_item_code#">http://leagueoflegends.wikia.com/wiki/Recommended_item_code#</a>)</li>
+</ol><p><strong>Create a text file for your builds, in a directory named after your champion <em>(see point 1)</em> and name it:</strong></p>
+
+<ol>
+<li>
+<code>RecItemsCLASSIC.ini</code> - For Classic League of Legends (Summoner's Rift and Twisted Treeline)</li>
+<li>
+<code>RecItemsODIN.ini</code> - For Dominion (Crystal Scar)</li>
+<li>
+<code>RecItemsARAM.ini</code> - For the Proving Grounds (which basically is an All Random All Mid)</li>
+</ol><p>Each file should have at least a single block as follows:</p>
+
+<pre><code>[ItemSet1]
+SetName=Set1
+RecItem1=1028
+RecItem2=3111
+RecItem3=3044
+RecItem4=3116
+RecItem5=3124
+RecItem6=3100
+</code></pre>
+
+<p>See the files included in this project for a more extensive format as examples.</p>
         </article>
       </div>
     </div>
     <footer>
       <div class="owner">
-      <p><a href="https://github.com/FiXato" class="avatar"><img src="https://secure.gravatar.com/avatar/168dfa8856acecc028db5dbd485f0716?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png" width="48" height="48"/></a> <a href="https://github.com/FiXato">FiXato</a> maintains <a href="https://github.com/FiXato/LeagueOfLegendsRecItems">Leagueoflegendsrecitems</a></p>
+      <p><a href="https://github.com/FiXato" class="avatar"><img src="https://secure.gravatar.com/avatar/168dfa8856acecc028db5dbd485f0716?s=30&amp;d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-140.png" width="48" height="48"/></a> <a href="https://github.com/FiXato">FiXato</a> maintains <a href="https://github.com/FiXato/LeagueOfLegendsRecItems">League of Legends Recommended Items INI Package</a></p>
 
 
       </div>
