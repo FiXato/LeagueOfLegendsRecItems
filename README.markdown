@@ -6,6 +6,9 @@ This repository will contain **my** _recommended items_ for League of Legends ch
 The INI files are built per instructions of http://leagueoflegends.wikia.com/wiki/Recommended_item_code with my own additions such as comments showing the statistics of each item, as well as total costs.
 Manually adding these should help with seeing if any stats are missing for a character build.
 
+## Discontinuation notice
+This project is no longer maintained. I rarely play the game, and I doubt any of this still actually works.
+
 ## Usage Instructions
 ### Installation
 Find the directory where you've installed League of Legends (for instance **`G:\Games\League of Legends\`** ) and go down to the **`RADS\solutions\lol_game_client_sln\releases\VERSION.NUMBER\deploy\DATA`** directory and clone this repository there as 'Characters'.<br />
